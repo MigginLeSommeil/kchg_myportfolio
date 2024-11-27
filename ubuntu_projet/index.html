@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Système Ubuntu Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Écran de démarrage -->
+  <div id="startup-screen">
+    <div class="startup-container">
+      <h1>🔑 Bienvenue sur Ubuntu Web</h1>
+      <p>Veuillez entrer vos informations pour démarrer :</p>
+      
+      <form id="login-form">
+        <label for="username">Identifiant :</label>
+        <input type="text" id="username" placeholder="visiteur" required>
+        
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" placeholder="Explorer!" required>
+        
+        <button type="submit">Démarrer</button>
+      </form>
+      
+      <p class="error-message" id="error-message"></p>
+    </div>
+  </div>
+
+  <!-- Barre supérieure -->
+  <header class="top-bar" style="display: none;">
+    <div class="left">
+      <span class="menu-icon">≡</span>
+    </div>
+    <div class="center">
+      <span class="date-time">27 Nov 10:49</span> <!-- Cet élément sera mis à jour dynamiquement -->
+    </div>
+    <div class="right">
+      <span class="icon">🔊</span>
+      <span class="icon">📶</span>
+      <span class="icon">🔋</span>
+      <span class="icon">⚙️</span>
+    </div>
+  </header>
+
+  <!-- Dock -->
+  <nav class="dock" style="display: none;">
+    <ul>
+      <li data-page="help.html" class="window-btn">❓ Aide</li>
+      <li data-page="accueil.html" class="window-btn">🏠 Home</li>
+      <li data-page="profil.html" class="window-btn">👤 Profil</li>
+      <li data-page="bts-sio.html" class="window-btn">📚 BTS SIO</li>
+      <li data-page="entreprises.html" class="window-btn">🏢 Works</li>
+      <li data-page="projets.html" class="window-btn">💻 Projets</li>
+      <li data-page="veille-tech.html" class="window-btn">🔍 Veille Tech</li>
+    </ul>
+  </nav>
+
+  <!-- Conteneur des fenêtres -->
+  <div id="windows-container" style="display: none;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

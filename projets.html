@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets - Mon Parcours</title>
+  <link rel="stylesheet" href="styles4.css">
+  <script src="script1.js" defer></script>
+</head>
+<body>
+
+  <!-- Barre de navigation (style navigateur) -->
+  <header class="header">
+    <div class="header-container">
+      <button class="back-button">⬅️</button>
+      <input type="text" id="search-bar" class="search-bar" value="Mes projets" readonly>
+      <button class="settings-button">⚙️</button>
+    </div>
+  </header>
+
+  <!-- Contenu de la page Projets -->
+  <main class="main-content">
+    <section class="intro-section">
+      <h1>Mes Projets</h1>
+      <p>Explorez mes différents projets sous forme de dossiers et de fichiers :</p>
+    </section>
+
+    <!-- Interface Système d'exploitation avec dossiers et fichiers -->
+    <section class="projects-section">
+      <div class="folder">
+        <div class="folder-header">Projets Formations</div>
+        <div class="files">
+          <div class="file" onclick="openPDF('/pdf/devc.pdf')">Projet 1 - Développement d'une application</div>
+          <div class="file" onclick="openPDF('/pdf/devc.pdf')">Projet 2 - Analyse de données</div>
+          <div class="file" onclick="openPDF('/pdf/devc.pdf')">Projet 3 - Réseaux et sécurité</div>
+        </div>
+      </div>
+
+      <div class="folder">
+        <div class="folder-header">Projets Entreprises</div>
+        <div class="files">
+          <div class="file" onclick="openPDF('/pdf/devc.pdf')">Projet 4 - Site web personnel</div>
+          <div class="file" onclick="openPDF('/pdf/devc.pdf')">Projet 5 - Application mobile</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fenêtre modale pour afficher les PDFs -->
+    <div id="pdfModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closePDF()">&times;</span>
+        <iframe id="pdfViewer" src="" width="100%" height="600px"></iframe>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 Keycie Chang - BTS SIO</p>
+  </footer>
+
+</body>
+</html>
